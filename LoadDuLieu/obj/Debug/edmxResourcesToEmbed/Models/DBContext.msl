@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WolvesTeamModelStoreContainer" CdmEntityContainer="DBContext">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="WolvesTeamModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Wolves" ColumnName="Wolves" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BanLenhs">
+      <EntityTypeMapping TypeName="WolvesTeamModel.BanLenh">
+        <MappingFragment StoreEntitySet="BanLenh">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="WolvesTeamModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Gmail" ColumnName="Gmail" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="STK" ColumnName="STK" />
+          <ScalarProperty Name="NameBank" ColumnName="NameBank" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Telegram" ColumnName="Telegram" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoiTacs">
+      <EntityTypeMapping TypeName="WolvesTeamModel.DoiTac">
+        <MappingFragment StoreEntitySet="DoiTac">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenDoiTac" ColumnName="TenDoiTac" />
+          <ScalarProperty Name="TrangWeb" ColumnName="TrangWeb" />
+          <ScalarProperty Name="ThongTinKhac" ColumnName="ThongTinKhac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoiTiens">
+      <EntityTypeMapping TypeName="WolvesTeamModel.DoiTien">
+        <MappingFragment StoreEntitySet="DoiTien">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="IdAccount" ColumnName="IdAccount" />
+          <ScalarProperty Name="STK" ColumnName="STK" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="NameBank" ColumnName="NameBank" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Golds">
+      <EntityTypeMapping TypeName="WolvesTeamModel.Gold">
+        <MappingFragment StoreEntitySet="Gold">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="SoldOut" ColumnName="SoldOut" />
+          <ScalarProperty Name="BuyInto" ColumnName="BuyInto" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invites">
+      <EntityTypeMapping TypeName="WolvesTeamModel.Invite">
+        <MappingFragment StoreEntitySet="Invite">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Presenter" ColumnName="Presenter" />
+          <ScalarProperty Name="Presentee" ColumnName="Presentee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadWolves">
+      <EntityTypeMapping TypeName="WolvesTeamModel.LoadWolf">
+        <MappingFragment StoreEntitySet="LoadWolves">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Wolves" ColumnName="Wolves" />
+          <ScalarProperty Name="IdAccount" ColumnName="IdAccount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="WolvesTeamModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewWolves">
+      <EntityTypeMapping TypeName="WolvesTeamModel.NewWolf">
+        <MappingFragment StoreEntitySet="NewWolves">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titile" ColumnName="Titile" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PackVIPs">
+      <EntityTypeMapping TypeName="WolvesTeamModel.PackVIP">
+        <MappingFragment StoreEntitySet="PackVIP">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Wol" ColumnName="Wol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rates">
+      <EntityTypeMapping TypeName="WolvesTeamModel.Rate">
+        <MappingFragment StoreEntitySet="Rate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Buy" ColumnName="Buy" />
+          <ScalarProperty Name="Sell" ColumnName="Sell" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanGiaoDiches">
+      <EntityTypeMapping TypeName="WolvesTeamModel.SanGiaoDich">
+        <MappingFragment StoreEntitySet="SanGiaoDich">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titile" ColumnName="Titile" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Symbols">
+      <EntityTypeMapping TypeName="WolvesTeamModel.Symbol">
+        <MappingFragment StoreEntitySet="Symbol">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="WolvesTeamModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThongKes">
+      <EntityTypeMapping TypeName="WolvesTeamModel.ThongKe">
+        <MappingFragment StoreEntitySet="ThongKe">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PipCu" ColumnName="PipCu" />
+          <ScalarProperty Name="PipMoi" ColumnName="PipMoi" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TinHieuPosts">
+      <EntityTypeMapping TypeName="WolvesTeamModel.TinHieuPost">
+        <MappingFragment StoreEntitySet="TinHieuPost">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TongQuats">
+      <EntityTypeMapping TypeName="WolvesTeamModel.TongQuat">
+        <MappingFragment StoreEntitySet="TongQuat">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TongPip" ColumnName="TongPip" />
+          <ScalarProperty Name="Trades" ColumnName="Trades" />
+          <ScalarProperty Name="WinRate" ColumnName="WinRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Videos">
+      <EntityTypeMapping TypeName="WolvesTeamModel.Video">
+        <MappingFragment StoreEntitySet="Video">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="LinkVideo" ColumnName="LinkVideo" />
+          <ScalarProperty Name="LinkYoutube" ColumnName="LinkYoutube" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIPs">
+      <EntityTypeMapping TypeName="WolvesTeamModel.VIP">
+        <MappingFragment StoreEntitySet="VIP">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdAccount" ColumnName="IdAccount" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="End" ColumnName="End" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AddBanLenh" FunctionName="WolvesTeamModel.Store.AddBanLenh" />
+    <FunctionImportMapping FunctionImportName="AddNews" FunctionName="WolvesTeamModel.Store.AddNews" />
+    <FunctionImportMapping FunctionImportName="BlockAccount" FunctionName="WolvesTeamModel.Store.BlockAccount" />
+    <FunctionImportMapping FunctionImportName="CheckVIP" FunctionName="WolvesTeamModel.Store.CheckVIP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.CheckVIP_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdAccount" ColumnName="IdAccount" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="End" ColumnName="End" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ConfirmDoiTien" FunctionName="WolvesTeamModel.Store.ConfirmDoiTien" />
+    <FunctionImportMapping FunctionImportName="ConfirmWolves" FunctionName="WolvesTeamModel.Store.ConfirmWolves" />
+    <FunctionImportMapping FunctionImportName="CountAccount" FunctionName="WolvesTeamModel.Store.CountAccount" />
+    <FunctionImportMapping FunctionImportName="GetAccountList" FunctionName="WolvesTeamModel.Store.GetAccountList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetAccountList_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Wolves" ColumnName="Wolves" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetBanLenh" FunctionName="WolvesTeamModel.Store.GetBanLenh">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetBanLenh_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCountLoadWolvesCancel" FunctionName="WolvesTeamModel.Store.GetCountLoadWolvesCancel" />
+    <FunctionImportMapping FunctionImportName="GetCountLoadWolvesConfirmed" FunctionName="WolvesTeamModel.Store.GetCountLoadWolvesConfirmed" />
+    <FunctionImportMapping FunctionImportName="GetCountLoadWolvesWaiting" FunctionName="WolvesTeamModel.Store.GetCountLoadWolvesWaiting" />
+    <FunctionImportMapping FunctionImportName="GetCurrentAndPrevByNameAndDay" FunctionName="WolvesTeamModel.Store.GetCurrentAndPrevByNameAndDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetCurrentAndPrevByNameAndDay_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Buy" ColumnName="Buy" />
+          <ScalarProperty Name="Sell" ColumnName="Sell" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCurrentAndPrevRate" FunctionName="WolvesTeamModel.Store.GetCurrentAndPrevRate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetCurrentAndPrevRate_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sell" ColumnName="Sell" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetDoiTien" FunctionName="WolvesTeamModel.Store.GetDoiTien">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetDoiTien_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="IdAccount" ColumnName="IdAccount" />
+          <ScalarProperty Name="STK" ColumnName="STK" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="NameBank" ColumnName="NameBank" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id1" ColumnName="Id1" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Wolves" ColumnName="Wolves" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetIDByEmail" FunctionName="WolvesTeamModel.Store.GetIDByEmail" />
+    <FunctionImportMapping FunctionImportName="GetInvited" FunctionName="WolvesTeamModel.Store.GetInvited">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetInvited_Result">
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetLastRateByName" FunctionName="WolvesTeamModel.Store.GetLastRateByName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetLastRateByName_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Buy" ColumnName="Buy" />
+          <ScalarProperty Name="Sell" ColumnName="Sell" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetLastTinHieuPost" FunctionName="WolvesTeamModel.Store.GetLastTinHieuPost">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetLastTinHieuPost_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetLoadWolvesListCancel" FunctionName="WolvesTeamModel.Store.GetLoadWolvesListCancel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetLoadWolvesListCancel_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Wolves" ColumnName="Wolves" />
+          <ScalarProperty Name="IdAccount" ColumnName="IdAccount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetLoadWolvesListConfirmed" FunctionName="WolvesTeamModel.Store.GetLoadWolvesListConfirmed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetLoadWolvesListConfirmed_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Wolves" ColumnName="Wolves" />
+          <ScalarProperty Name="IdAccount" ColumnName="IdAccount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetLoadWolvesListWaiting" FunctionName="WolvesTeamModel.Store.GetLoadWolvesListWaiting">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetLoadWolvesListWaiting_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Wolves" ColumnName="Wolves" />
+          <ScalarProperty Name="IdAccount" ColumnName="IdAccount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetMinMaxInDay" FunctionName="WolvesTeamModel.Store.GetMinMaxInDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetMinMaxInDay_Result">
+          <ScalarProperty Name="max" ColumnName="max" />
+          <ScalarProperty Name="min" ColumnName="min" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetNews" FunctionName="WolvesTeamModel.Store.GetNews">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetNews_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetNewsByDate" FunctionName="WolvesTeamModel.Store.GetNewsByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetNewsByDate_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetNewsVip" FunctionName="WolvesTeamModel.Store.GetNewsVip">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetNewsVip_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetNewsVipByDate" FunctionName="WolvesTeamModel.Store.GetNewsVipByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetNewsVipByDate_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetRateByNameAndDate" FunctionName="WolvesTeamModel.Store.GetRateByNameAndDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetRateByNameAndDate_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Buy" ColumnName="Buy" />
+          <ScalarProperty Name="Sell" ColumnName="Sell" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSymbolList" FunctionName="WolvesTeamModel.Store.GetSymbolList" />
+    <FunctionImportMapping FunctionImportName="GetThongKe" FunctionName="WolvesTeamModel.Store.GetThongKe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetThongKe_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="PipCu" ColumnName="PipCu" />
+          <ScalarProperty Name="PipMoi" ColumnName="PipMoi" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetTinHieuPost" FunctionName="WolvesTeamModel.Store.GetTinHieuPost">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetTinHieuPost_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetTongQuat" FunctionName="WolvesTeamModel.Store.GetTongQuat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.GetTongQuat_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TongPip" ColumnName="TongPip" />
+          <ScalarProperty Name="Trades" ColumnName="Trades" />
+          <ScalarProperty Name="WinRate" ColumnName="WinRate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InputInvite" FunctionName="WolvesTeamModel.Store.InputInvite" />
+    <FunctionImportMapping FunctionImportName="InsertDoiTien" FunctionName="WolvesTeamModel.Store.InsertDoiTien" />
+    <FunctionImportMapping FunctionImportName="InsertRate" FunctionName="WolvesTeamModel.Store.InsertRate" />
+    <FunctionImportMapping FunctionImportName="InsertSymbol" FunctionName="WolvesTeamModel.Store.InsertSymbol" />
+    <FunctionImportMapping FunctionImportName="LoadingWolves" FunctionName="WolvesTeamModel.Store.LoadingWolves" />
+    <FunctionImportMapping FunctionImportName="LoginAccount" FunctionName="WolvesTeamModel.Store.LoginAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.LoginAccount_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Wolves" ColumnName="Wolves" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Register" FunctionName="WolvesTeamModel.Store.Register" />
+    <FunctionImportMapping FunctionImportName="RegisterVIP" FunctionName="WolvesTeamModel.Store.RegisterVIP" />
+    <FunctionImportMapping FunctionImportName="SearchAccount" FunctionName="WolvesTeamModel.Store.SearchAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WolvesTeamModel.SearchAccount_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Wolves" ColumnName="Wolves" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="WolvesTeamModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="WolvesTeamModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="WolvesTeamModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="WolvesTeamModel.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="WolvesTeamModel.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="WolvesTeamModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="WolvesTeamModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="UnBlockAccount" FunctionName="WolvesTeamModel.Store.UnBlockAccount" />
+    <FunctionImportMapping FunctionImportName="UpdateAccount" FunctionName="WolvesTeamModel.Store.UpdateAccount" />
+  </EntityContainerMapping>
+</Mapping>
