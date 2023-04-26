@@ -1,0 +1,36 @@
+Date : 25 - 04 - 2023
+EUR/USD SELL LIMIT  : 1.10600
+TP : 1.09060
+SL : 1.10860
+Image:C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal?E1A7AAF0173BE0D978BF4548C\MQL4\Files/EURUSD.fx_6257736.gif
+**
+Date : 25 - 04 - 2023
+GOLD SELL LIMIT  : 1996.00
+TP : 1975.00
+SL : 2002.00
+Image:C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal?E1A7AAF0173BE0D978BF4548C\MQL4\Files/GOLD.m_6257742.gif
+**
+Date : 25 - 04 - 2023
+NZD/JPY SELL LIMIT  : 83.160
+TP : 82.730
+SL : 83.260
+Image:C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal?E1A7AAF0173BE0D978BF4548C\MQL4\Files/NZDJPY.fx_6257798.gif
+**
+Date : 25 - 04 - 2023
+EUR/JPY BUY LIMIT  : 147.950
+TP : 148.930
+SL : 147.790
+Image:C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal?E1A7AAF0173BE0D978BF4548C\MQL4\Files/EURJPY.fx_6257847.gif
+**
+Date : 25 - 04 - 2023
+EUR/JPY BUY LIMIT  : 146.730
+TP : 148.890
+SL : 146.350
+Image:C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal?E1A7AAF0173BE0D978BF4548C\MQL4\Files/EURJPY.fx_6259519.gif
+**
+Date : 26 - 04 - 2023
+USD/CAD SELL LIMIT  : 1.36370
+TP : 1.35330
+SL : 1.37000
+Image:C:\Users\Administrator\AppData\Roaming\MetaQuotes\Terminal?E1A7AAF0173BE0D978BF4548C\MQL4\Files/USDCAD.fx_6262895.gif
+**

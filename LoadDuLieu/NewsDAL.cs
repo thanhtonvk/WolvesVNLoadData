@@ -13,26 +13,28 @@ namespace LoadDuLieu
 {
     class NewsResponse
     {
-        public DateTime? date { get; set; }
-        public TimeSpan? time { get; set; }
-        public string content { get; set; }
-        public bool? type { get; set; }
+        public int Id { get; set; }
+        public string Date { get; set; }
+        public string Time { get; set; }
+        public string Content { get; set; }
+        public Nullable<bool> Type { get; set; }
     }
+
     class NewsDAL
     {
-
         DBContext db;
         WebClient client;
         private IFirebaseClient firebaseClient;
+
         public NewsDAL(IFirebaseClient firebaseClient)
         {
             db = new DBContext();
             client = new WebClient();
             this.firebaseClient = firebaseClient;
         }
+
         public void addNormalNews()
         {
-
             Console.WriteLine("Load news");
             string url =
                 "C:/Users/Administrator/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Tin_tuc.csv";
@@ -50,10 +52,10 @@ namespace LoadDuLieu
                 for (int i = lineCountOldFile; i < lines.Count(); i++)
                 {
                     values += (lines[i] + "\n");
-
                 }
+
                 values.Replace("****", "**");
-                foreach (var value in values.Split(new[] { "**" }, StringSplitOptions.None))
+                foreach (var value in values.Split(new[] {"**"}, StringSplitOptions.None))
                 {
                     if (value.Trim().Length < 1) continue;
                     else
@@ -64,17 +66,25 @@ namespace LoadDuLieu
                         var model = db.News.ToList();
                         model.Reverse();
                         var news = model[0];
-                        firebaseClient.Set(@"News/" + ngay + "/" + news.Id, news);
+                        var pushModel = new NewsResponse()
+                        {
+                            Content = news.Content,
+                            Date = news.Date.ToString("yyyy-MM-dd"),
+                            Id = news.Id,
+                            Time = news.Time.ToString("c"),
+                            Type = news.Type
+                        };
+                        firebaseClient.Set(@"News/" + ngay + "/" + pushModel.Id, pushModel);
                     }
                 }
-
             }
         }
-        public void GetNewsVip()
+
+        public void addNewsVip()
         {
             Console.WriteLine("Load news vip");
             string url =
-                   "C:/Users/Administrator/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Tin_tuc_vip.csv";
+                "C:/Users/Administrator/AppData/Roaming/MetaQuotes/Terminal/Common/Files/Tin_tuc_vip.csv";
 
             client.DownloadFile(url, "TinTuc_vip_New.txt");
             var lineCountNewFile = File.ReadLines("TinTuc_vip_New.txt").Count();
@@ -89,10 +99,10 @@ namespace LoadDuLieu
                 for (int i = lineCountOldFile; i < lines.Count(); i++)
                 {
                     values += (lines[i] + "\n");
-
                 }
+
                 values.Replace("****", "**");
-                foreach (var value in values.Split(new[] { "**" }, StringSplitOptions.None))
+                foreach (var value in values.Split(new[] {"**"}, StringSplitOptions.None))
                 {
                     if (value.Trim().Length < 1) continue;
                     else
@@ -103,12 +113,18 @@ namespace LoadDuLieu
                         var model = db.News.ToList();
                         model.Reverse();
                         var news = model[0];
-                        firebaseClient.Set(@"NewsVip/" + ngay + "/" + news.Id, news);
+                        var pushModel = new NewsResponse()
+                        {
+                            Content = news.Content,
+                            Date = news.Date.ToString("yyyy-MM-dd"),
+                            Id = news.Id,
+                            Time = news.Time.ToString("c"),
+                            Type = news.Type
+                        };
+                        firebaseClient.Set(@"NewsVip/" + ngay + "/" + pushModel.Id, pushModel);
                     }
                 }
-
             }
-
         }
     }
 }
