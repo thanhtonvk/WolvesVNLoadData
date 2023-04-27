@@ -17,3 +17,13 @@ D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\Newtonsoft.Json.dll
 D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\RestSharp.dll
 D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\Newtonsoft.Json.xml
 D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\RestSharp.xml
+D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\System.Net.Http.Extensions.dll
+D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\System.Net.Http.Primitives.dll
+D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\System.Net.Http.Extensions.xml
+D:\WolvesVN\LoadDuLieu\LoadDuLieu\bin\Debug\System.Net.Http.Primitives.xml

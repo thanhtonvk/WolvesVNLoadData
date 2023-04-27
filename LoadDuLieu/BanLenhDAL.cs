@@ -58,11 +58,11 @@ namespace LoadDuLieu
                         string[] date = value[0].Split(':')[1].Replace(" ", "").Split('-');
                         string image = value[4];
                         string fileName = image.Split('/')[1];
-                        // string urlImage =
-                        //     "C:/Users/Administrator/AppData/Roaming/MetaQuotes/Terminal/9D15457EC01AD10E06A932AAC616DC32/MQL4/Files/" +
-                        //     fileName;
-                        // client.DownloadFile(urlImage,
-                        //     "D:/WolvesVN/WolfTeam/WolvesServer/WolvesServer/Image/BanLenh/" + fileName);
+                        string urlImage =
+                            "C:/Users/Administrator/AppData/Roaming/MetaQuotes/Terminal/9D15457EC01AD10E06A932AAC616DC32/MQL4/Files/" +
+                            fileName;
+                        client.DownloadFile(urlImage,
+                            "D:/WolvesVN/WolfTeam/WolvesServer/WolvesServer/Image/BanLenh/" + fileName);
 
                         db.AddBanLenh(DateTime.Parse(date[2] + "-" + date[1] + "-" + date[0]), value[1],
                             float.Parse(value[2].Split(':')[1].Trim()), float.Parse(value[3].Split(':')[1].Trim()),
