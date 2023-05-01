@@ -1,6 +1,7 @@
 ﻿using LoadDuLieu.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -116,10 +117,11 @@ namespace LoadDuLieu
             {
                 run();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine(ex.ToString());
-                run();
+                var applicationPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                Process.Start(applicationPath);
+                Environment.Exit(Environment.ExitCode);
             }
 
             Console.ReadKey();
