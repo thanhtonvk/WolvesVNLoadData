@@ -17,14 +17,15 @@ namespace LoadDuLieu
     {
         public static void run()
         {
+            SendNotification sendNotification = new SendNotification();
             IFirebaseConfig config = new FirebaseConfig
             {
                 AuthSecret = "R20tmZqaTY9WnrsEr9vk5nyzq6rZ6hO4OACKD1Su",
                 BasePath = "https://wolfteam-f01f4-default-rtdb.asia-southeast1.firebasedatabase.app/"
             };
             IFirebaseClient client = new FireSharp.FirebaseClient(config);
-            BanLenhDAL banLenhDAL = new BanLenhDAL(client);
-            NewsDAL newsDal = new NewsDAL(client);
+            BanLenhDAL banLenhDAL = new BanLenhDAL(client, sendNotification);
+            NewsDAL newsDal = new NewsDAL(client, sendNotification);
             RateDAL rateDAL = new RateDAL();
             while (true)
             {
@@ -61,7 +62,6 @@ namespace LoadDuLieu
                 TP = double.Parse(value["TP"])
             };
             _banLenhs.Add(banLenh);
-
         }
 
         public static async void streamData()
@@ -118,18 +118,10 @@ namespace LoadDuLieu
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 run();
             }
-            // FCMPushNotification fcmPush = new FCMPushNotification();
-            // var result = fcmPush.SendNotification("your notificatin title", "Your body message", "news");
-            // if(result.Successful == true )
-            // {
-            //     Console.WriteLine("OK");
-            // }
-            // else
-            // {
-            //     Console.WriteLine(result.Error.ToString());
-            // }
+
             Console.ReadKey();
         }
     }

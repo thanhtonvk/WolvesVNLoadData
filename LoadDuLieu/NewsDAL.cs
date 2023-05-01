@@ -25,12 +25,14 @@ namespace LoadDuLieu
         DBContext db;
         WebClient client;
         private IFirebaseClient firebaseClient;
+        private SendNotification sendNotification;
 
-        public NewsDAL(IFirebaseClient firebaseClient)
+        public NewsDAL(IFirebaseClient firebaseClient, SendNotification sendNotification)
         {
             db = new DBContext();
             client = new WebClient();
             this.firebaseClient = firebaseClient;
+            this.sendNotification = sendNotification;
         }
 
         public void addNormalNews()
@@ -75,6 +77,7 @@ namespace LoadDuLieu
                             Type = news.Type
                         };
                         firebaseClient.Set(@"News/" + ngay + "/" + pushModel.Id, pushModel);
+                        sendNotification.Send(pushModel.Content);
                     }
                 }
             }
@@ -122,6 +125,7 @@ namespace LoadDuLieu
                             Type = news.Type
                         };
                         firebaseClient.Set(@"NewsVip/" + ngay + "/" + pushModel.Id, pushModel);
+                        sendNotification.Send(pushModel.Content);
                     }
                 }
             }

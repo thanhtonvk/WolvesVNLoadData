@@ -13,12 +13,14 @@ namespace LoadDuLieu
         DBContext db;
         WebClient client;
         private IFirebaseClient firebaseClient;
+        private SendNotification sendNotification;
 
-        public BanLenhDAL(IFirebaseClient firebaseClient)
+        public BanLenhDAL(IFirebaseClient firebaseClient, SendNotification sendNotification)
         {
             db = new DBContext();
             client = new WebClient();
             this.firebaseClient = firebaseClient;
+            this.sendNotification = sendNotification;
         }
 
         public List<string> splitBanLenh(string value)
@@ -48,6 +50,7 @@ namespace LoadDuLieu
                 {
                     values += (lines[i] + "/n");
                 }
+
                 foreach (var content in values.Split(new[] {"**"}, StringSplitOptions.None))
                 {
                     Console.WriteLine(values);
@@ -62,7 +65,7 @@ namespace LoadDuLieu
                             "C:/Users/Administrator/AppData/Roaming/MetaQuotes/Terminal/9D15457EC01AD10E06A932AAC616DC32/MQL4/Files/" +
                             fileName;
                         client.DownloadFile(urlImage,
-                            "D:/WolvesVN/WolfTeam/WolvesServer/WolvesServer/Image/BanLenh/" + fileName);
+                            "D:/WolvesServer/WolvesServer/Image/BanLenh/" + fileName);
 
                         db.AddBanLenh(DateTime.Parse(date[2] + "-" + date[1] + "-" + date[0]), value[1],
                             float.Parse(value[2].Split(':')[1].Trim()), float.Parse(value[3].Split(':')[1].Trim()),
@@ -72,6 +75,7 @@ namespace LoadDuLieu
                         var banLenh = model[0];
                         string ngay = date[2] + "-" + date[1] + "-" + date[0];
                         firebaseClient.Set(@"BanLenh/" + ngay + "/" + banLenh.Id, banLenh);
+                        sendNotification.Send($"{banLenh.Content}");
                     }
                 }
             }
